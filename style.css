@@ -4,9 +4,42 @@ body {
 }
 
 h1 {
-
+  color: #f8f9ac;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 3px 3px 5px black;
+  text-decoration: underline;
+  position: fixed;
+  left: 600px;
+  margin: 0 auto;
 }
 
-h3 {
+form {
+  color: #ffa700;
+  text-align: center;
+  padding: 80px;
+}
 
+p {
+  color: #ff4000;
+}
+
+#top-left {
+  color: #ffa700;
+  font-size: 20px;
+  text-align: left;
+  position: fixed;
+  margin: 0 auto;
+  border: 4px double #ffa700;
+  padding: 0px 40px 50px 40px;
+}
+
+#top-right {
+  color: #ffa700;
+  position: fixed;
+  text-align: left;
+  margin: 0 auto;
+  right: 0px;
+  border: 4px double #ffa700;
+  padding: 0px 30px 50px 30px;
 }
