@@ -1,1 +1,1 @@
-![](desktop/project1wireframe.jpg?raw=true)
+![wireframe](https://git.generalassemb.ly/jkarlin929/PROJECT-1-PROMPT/blob/master/project1wireframe.JPG "Wireframe")
