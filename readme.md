@@ -1,1 +1,1 @@
-![](desktop/project1wireframe.png?raw=true)
+![](desktop/project1wireframe.jpg?raw=true)
