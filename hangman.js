@@ -9,43 +9,45 @@ let words = ["cosmos", "rabbit", "valley", "flakes", "assign", "monkey", "forest
 //randomize through array of words and set that to randomized solutions variable
 let solutions = words[Math.floor(Math.random() * words.length)];
 // console.log(words);
-console.log(solutions);
+//console.log(solutions);
 //split randomized word into characters(maybe?)
 let characters = [...solutions];
 console.log(characters);
 
 let answers = [];
-let $spaces = $(".spaces");
-console.log($spaces);
+let $spaces = $("#spaces");
+//console.log($spaces);
 // console.log(answers);
 
 for(let i = 0; i < solutions.length; i++) {
   answers[i] = " ";
 }
-console.log(answers);
+//console.log(answers);
 
 let $letters = $(".letters");
 
   //add click event for each letter
   for (let j = 0; j < $letters.length; j++) {
     $($letters[j]).click(function() {
-      console.log($letters[j]);
+      //console.log($letters[j]);
       turnsRemaining -= 1
       //if my letter class is equal to a letter in the solution make innerHTML/display appear in spaces class
-      console.log("this is characters:", characters, "this is letters[j].innerHTML:", $letters[j].innerHTML);
       //if ($letters[j] === characters){
         let guessedLetter = $letters[j].innerHTML;
 
-        console.log(guessedLetter);
-        console.log($spaces);
-
-        function changeText(){
-
-        }
-        if (characters.indexOf(guessedLetter.toLowerCase()) !== -1) {
-            // console.log($letters[j]);
-          $($letters[j]).css({'visibility': 'hidden'});
-
+        //console.log(guessedLetter);
+        //console.log($spaces);
+        let lowerCaseGuessed = guessedLetter.toLowerCase()
+        $($letters[j]).css({'visibility': 'hidden'});
+        if (characters.indexOf(lowerCaseGuessed) !== -1) {
+          let indexOfLetter = characters.indexOf(lowerCaseGuessed);
+          for (let k = 0; k < characters.length; k++) {
+            if (characters[k] === lowerCaseGuessed) {
+              //$('.answer-space')[k].html(lowerCaseGuessed);
+              let answerSpaces = document.getElementsByClassName('answer-space');
+              answerSpaces[k].innerHTML = guessedLetter;
+            }
+          }
       }
       //
       // }
