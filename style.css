@@ -20,10 +20,6 @@ form {
   padding: 80px;
 }
 
-p {
-  color: #ff4000;
-}
-
 #top-left {
   color: #ffa700;
   font-size: 20px;
@@ -42,4 +38,27 @@ p {
   right: 0px;
   border: 4px double #ffa700;
   padding: 0px 30px 50px 30px;
+}
+
+.row {
+  font-size: 50px;
+  margin: 30px;
+  color: #b80000;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.letters{
+  border: 1px solid yellow;
+  display: flex;
+  padding: 10px;
+}
+
+.spaces{
+  font-size: 140px;
+  color: #ff4000;
+  display: flex;
+  justify-content: space-around;
+  text-shadow: 3px 5px black;
 }
