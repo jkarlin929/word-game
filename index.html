@@ -5,12 +5,15 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>Hangman</h1>
+    <div>
+      <h1>Hangman</h1>
       <h3 id="top-left"> Name: </h3>
       <h3 id="top-right"> Tries Remaining: </h3>
-    <form action="" id="form-entry">
+    </div>
+
+    <form id="form-entry">
       Enter Name: <input type="text" name="first-name">
-      <input type="submit" value="Submit Initals">
+      <input type="button" value="Submit">
     </form>
 
     <div id="spaces">
@@ -50,6 +53,10 @@
       <div class="letters" id="y">Y</div>
       <div class="letters" id="z">Z</div>
     </div>
+
+
+  <button type="button" onclick="reloadPage();">Restart</button>
+
 
   <script
   src="https://code.jquery.com/jquery-3.2.1.js"

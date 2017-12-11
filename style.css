@@ -15,9 +15,18 @@ h1 {
 }
 
 form {
+  transition: opacity 1s ease-out;
+  opacity: 1;
+  height: auto;
+  overflow: hidden;
   color: #ffa700;
   text-align: center;
   padding: 80px;
+}
+
+form:hover{
+  opacity: 0;
+  height: 0;
 }
 
 #top-left {
@@ -61,4 +70,18 @@ form {
   display: flex;
   justify-content: space-around;
   text-shadow: 3px 5px black;
+}
+
+button {
+  position: relative;
+  background-color: black;
+  color: #ff4000;
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  font-size: 30px;
+  font-family: arial;
+  left: 45%;
+  text-align: center;
+
 }

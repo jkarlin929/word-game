@@ -1,6 +1,16 @@
 $('document').ready(function() {// console.log("Here we go");
+
+//set form
+const form = $('#form-entry');
+const submitButton = $('[type=button');
+form.submit(grabForm);
+function grabForm(event) {
+  event.preventDefault();
+  const value = $('input')
+  value.val('');
+}
+
 //get input from form and use .val to store it in top-left id
-//use innerHTML from .val to put it into top-left id
 
 //maybe a start button?
 //set variable to create array of words as possible solutions
@@ -8,79 +18,41 @@ let turnsRemaining = 7;
 let words = ["cosmos", "rabbit", "valley", "flakes", "assign", "monkey", "forest"];
 //randomize through array of words and set that to randomized solutions variable
 let solutions = words[Math.floor(Math.random() * words.length)];
-// console.log(words);
-//console.log(solutions);
-//split randomized word into characters(maybe?)
+//split randomized word into characters
 let characters = [...solutions];
 console.log(characters);
-
-let answers = [];
-let $spaces = $("#spaces");
-//console.log($spaces);
-// console.log(answers);
-
-for(let i = 0; i < solutions.length; i++) {
-  answers[i] = " ";
-}
-//console.log(answers);
-
-let $letters = $(".letters");
+const $spaces = $("#spaces");
+const $letters = $(".letters");
 
   //add click event for each letter
   for (let j = 0; j < $letters.length; j++) {
     $($letters[j]).click(function() {
-      //console.log($letters[j]);
       turnsRemaining -= 1
       //if my letter class is equal to a letter in the solution make innerHTML/display appear in spaces class
-      //if ($letters[j] === characters){
         let guessedLetter = $letters[j].innerHTML;
-
-        //console.log(guessedLetter);
-        //console.log($spaces);
         let lowerCaseGuessed = guessedLetter.toLowerCase()
-        $($letters[j]).css({'visibility': 'hidden'});
-        if (characters.indexOf(lowerCaseGuessed) !== -1) {
-          let indexOfLetter = characters.indexOf(lowerCaseGuessed);
+          $($letters[j]).css({'visibility': 'hidden'});
+            if (characters.indexOf(lowerCaseGuessed) !== -1) {
+        let indexOfLetter = characters.indexOf(lowerCaseGuessed);
+
           for (let k = 0; k < characters.length; k++) {
             if (characters[k] === lowerCaseGuessed) {
-              //$('.answer-space')[k].html(lowerCaseGuessed);
               let answerSpaces = document.getElementsByClassName('answer-space');
+              console.log(answerSpaces);
               answerSpaces[k].innerHTML = guessedLetter;
+              console.log(guessedLetter);
             }
           }
-      }
-      //
-      // }
+        }
+      // checkWin;
   })
 }
-
-
-let $letterA = $("#a");
-let $letterB = $("#b");
-let $letterC = $("#c");
-let $letterD = $("#d");
-let $letterE = $("#e");
-let $letterF = $("#f");
-let $letterG = $("#g");
-let $letterH = $("#h");
-let $letterI = $("#i");
-let $letterJ = $("#j");
-let $letterK = $("#k");
-let $letterL = $("#l");
-let $letterM = $("#m");
-let $letterN = $("#n");
-let $letterO = $("#o");
-let $letterP = $("#p");
-let $letterQ = $("#q");
-let $letterR = $("#r");
-let $letterS = $("#s");
-let $letterT = $("#t");
-let $letterU = $("#u");
-let $letterV = $("#v");
-let $letterW = $("#w");
-let $letterX = $("#x");
-let $letterY = $("#y");
-let $letterZ = $("#z");
+//check for a winner by seeing if the letters in spaces class is equal to 6
+// function checkWin(){
+//   if(){
+//     alert("you did something!");
+//   }
+// }
 
 
 
@@ -116,8 +88,13 @@ let $letterZ = $("#z");
 // let word = new Word('hello')
 // word.createLetters()
 
-
-
+//create a button to reload the page
+    let button = $("button");
+  $(document).ready(function(){
+        $("button").click(function(){
+            location.reload(true);
+        });
+    });
 
 //if guessed letter is a match manipulate display css property from hidden to inline/block if character is in solution
 //after each click event, if letter is in solution use innerHTML to make it appear in solution
