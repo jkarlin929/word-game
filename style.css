@@ -9,44 +9,39 @@ h1 {
   text-align: center;
   text-shadow: 3px 3px 5px black;
   text-decoration: underline;
-  position: fixed;
+  position: absolute;
   left: 600px;
   margin: 0 auto;
 }
 
 form {
   transition: opacity 1s ease-out;
-  opacity: 1;
-  height: auto;
-  overflow: hidden;
+  opacity: 0;
+  font-size: 28px;
+  text-shadow: 2px 2px 4px black;
   color: #ffa700;
   text-align: center;
-  padding: 80px;
+  padding: 70px;
 }
 
 form:hover{
-  opacity: 0;
-  height: 0;
+  opacity: 1;
 }
 
-#top-left {
+
+#titles{
+  display: flex;
+  justify-content: space-between;
   color: #ffa700;
   font-size: 20px;
-  text-align: left;
-  position: fixed;
-  margin: 0 auto;
+  text-shadow: 2px 2px 4px black;
   border: 4px double #ffa700;
-  padding: 0px 40px 50px 40px;
 }
 
-#top-right {
-  color: #ffa700;
-  position: fixed;
-  text-align: left;
-  margin: 0 auto;
-  right: 0px;
-  border: 4px double #ffa700;
-  padding: 0px 30px 50px 30px;
+#turns {
+  padding: 10px;
+  text-align: center;
+  font-size: 48px;
 }
 
 .row {
@@ -60,6 +55,7 @@ form:hover{
 
 .letters{
   border: 1px solid yellow;
+  color: #ff4000;
   display: flex;
   padding: 10px;
 }
@@ -83,5 +79,4 @@ button {
   font-family: arial;
   left: 45%;
   text-align: center;
-
 }

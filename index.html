@@ -5,24 +5,24 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div>
+    <div id="titles">
       <h1>Hangman</h1>
-      <h3 id="top-left"> Name: </h3>
-      <h3 id="top-right"> Tries Remaining: </h3>
+      <h3 id="top-left"> Name: <div class="preview" id="name"> </div></h3>
+      <h3 id="top-right"> Tries Remaining: <br> <div id="turns">7</div> </h3>
     </div>
 
-    <form id="form-entry">
-      Enter Name: <input type="text" name="first-name">
-      <input type="button" value="Submit">
+    <form id="form-entry" onkeypress="return event.keyCode != 13;">
+      Enter Name: <input type="text" id="player-name" name="first-name">
+      <input type="submit" value="Submit">
     </form>
 
     <div id="spaces">
-      <div class="answer-space">_ </div>
-      <div class="answer-space">_ </div>
-      <div class="answer-space">_ </div>
-      <div class="answer-space">_ </div>
-      <div class="answer-space">_ </div>
-      <div class="answer-space">_ </div>
+      <div class="answer-space">_</div>
+      <div class="answer-space">_</div>
+      <div class="answer-space">_</div>
+      <div class="answer-space">_</div>
+      <div class="answer-space">_</div>
+      <div class="answer-space">_</div>
     </div>
 
     <div class="row">
@@ -53,7 +53,6 @@
       <div class="letters" id="y">Y</div>
       <div class="letters" id="z">Z</div>
     </div>
-
 
   <button type="button" onclick="reloadPage();">Restart</button>
 
