@@ -30,8 +30,9 @@ MVP:
 POST MVP:
 -my POST MVP in this project includes:
     -adding a hangman image that increments by the amount of wrong guesses guessed.
-    -a background image that fits the theme
-    -making the clicked letters "disappear" or use an image to cover them
+    -change the restart button to restart the game and not the page.
+    -changing the amount of letters in each word
+
 
 Functional Components:
 Win Logic: High Priority, Estimated time-9hrs, Time Invested-5hrs, Actual Time- 5 hrs.
