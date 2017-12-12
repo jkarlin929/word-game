@@ -35,10 +35,10 @@ POST MVP:
 
 Functional Components:
 Component   Priority    Estimated Time  Time Invetsted  Actual Time
-Win logic   High        9hrs            9hrs           11hrs
-Letters to  High        1hr                            3hrs
+Win logic   High        9hrs            9hrs           4hrs
+Letters to  High        1hr                            5hrs
 click
-Spaces for  High        2hrs            1hr            1hr
+Spaces for  High        2hrs            1hr            3hr
 letters to
 appear
 Array of    High        1hour           20min          20min
@@ -50,3 +50,28 @@ Image
 Clicked     Medium      3hrs            4hrs            4hrs
 Letters
 Vanish
+
+Helper Functions:
+Function                    Description
+Lowercase                   Downcases the letter
+Push                        Adds a string to an array
+.html                       changes html in an element
+indexOf                     selects the index of an array item
+
+Code Snippet:
+$($letters[j]).css({'visibility': 'hidden'});
+It felt good to have a successful method work
+in my event listener. 
+
+jQuery Discoveries:
+Some jQuery discoveries made in this project are:
+.ready - event occurs when the DOM has been loaded.
+.reload - used to reload the current document.
+.indexOf - returns the indexed position of an array or string
+
+Issues and Resolutions
+I did have a few issues with using Class so I did shy away from using them.
+I ended up using jQuery for my functionality, which was comfortable for me to use.
+
+I did experience some TypeErrors during my project.
+I believe I ended up console-logging a lot.

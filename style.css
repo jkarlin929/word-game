@@ -28,6 +28,13 @@ form:hover{
   opacity: 1;
 }
 
+p {
+  text-align: center;
+  color: #ff4000;
+  font-size: 28px;
+  text-shadow: 2px 2px 4px black;
+}
+
 
 #titles{
   display: flex;
@@ -74,6 +81,11 @@ form:hover{
   text-align: center;
   color: #b80000;
   text-shadow: 2px 2px 4px black;
+  transform: all .3s ease-in-out;
+}
+
+#alert:hover{
+  transform: scale(1.5);
 }
 
 button {
@@ -88,6 +100,8 @@ button {
   left: 45%;
   text-align: center;
 }
+
+
 
 @media only screen and (min-device-width: 768px)
                    and (max-device-width: 1024px)

@@ -7,7 +7,7 @@ const nameSet = $('#name')
 //get input from form and use .val to store it in top-left id
 //maybe a start button?
 //set variable to create array of words as possible solutions
-let turnsRemaining = 7;
+let turnsRemaining = 10;
 let words = ["cosmos", "rabbit", "valley", "flakes", "assign", "monkey", "forest", "tissue", "office", "growth", "minute", "create", "button", "jaguar", "dinner", "museum", "permit", "search"];
 //randomize through array of words and set that to randomized solutions variable
 let solutions = words[Math.floor(Math.random() * words.length)];
