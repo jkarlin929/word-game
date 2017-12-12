@@ -34,9 +34,13 @@ function grabForm(event) {
         turnsRemaining -= 1
         //if my letter class is equal to a letter in the solution make innerHTML/display appear in spaces class
         $($turns).html(turnsRemaining);
+        //set the html in each letter to a variable
         let guessedLetter = $letters[j].innerHTML;
+        //set each letter to a lowercase to account for a match
         let lowerCaseGuessed = guessedLetter.toLowerCase()
+        //hide the display OR visibility of the letter clicked
         $($letters[j]).css({'visibility': 'hidden'});
+        //loop through each letter and if the letter is not in the array push the letter into the answers array
         if (characters.indexOf(lowerCaseGuessed) !== -1) {
           let indexOfLetter = characters.indexOf(lowerCaseGuessed);
           for (let k = 0; k < characters.length; k++) {
@@ -47,46 +51,21 @@ function grabForm(event) {
             }
           }
         }
+        //call checkWin function and alert if they lost
         checkWin(answersArray);
       } else {
         $($alert).html('You Lose!');
       }
     })
   }
-//check for a winner by seeing if the letters in spaces class is equal to 6
 
+//check for a winner by seeing if the letters in spaces class is equal to 6
 function checkWin(array) {
   if (array.length === 6) {
     $($alert).html('You Won!');
   }
 }
 
-// class Letter {
-//   constructor(value) {
-//     this.value = value;
-//     this.hidden = true;
-//   }
-//   show() {
-//     return this.value;
-//   }
-// }
-
-// class Word {
-//   constructor(word) {
-//     this.letter = [];
-//     this.word = word
-//     //this.showLetters = this.showLetters.bind(this)
-//   }
-//   createLetters() {
-//     this.word.split('').forEach(d => {
-//       this.letter.push(new Letter(d))
-//     })
-//     return this.showLetters()
-//   }
-//   showLetters() {
-//     return this.letter[0].show()
-//   }
-// }
 
 //create a button to reload the page
     let button = $("button");
@@ -95,13 +74,4 @@ function checkWin(array) {
             location.reload(true);
         });
     });
-
-//if guessed letter is a match manipulate display css property from hidden to inline/block if character is in solution
-//after each click event, if letter is in solution use innerHTML to make it appear in solution
-//if letter is not in solution, animate the div of that letter disappear and number of turns decreases by one
-//if turns is 0 then indicate game over
-//have the letter change once it is clicked so the user cannot use it again
-//if number of turns is over (At 0) then innerHTML appears(game over)
-//if the solution is solved(all innerHTML matches the solution) then display you've won!
-//write a function to check for a winner to see if all divs have a display of block instead of hidden OR set a variable that holds the total number of correct guesses and check if that number is equal to the total number of letters in words
 })

@@ -3,6 +3,7 @@ in the wireframe image, I included the idea for the game.
 In the final product, there was no "man" to "hang" included.
 
 ![time matrix](https://git.generalassemb.ly/jkarlin929/PROJECT-1-PROMPT/blob/master/timematrix.JPG) "Time Matrix"
+-Due to time constraints, I decided not to include a hangman image, and made this a word guessing game.
 
 In this Word Guessing Game:
 -User can submit their name for display purposes.
