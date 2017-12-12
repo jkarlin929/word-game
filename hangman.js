@@ -1,19 +1,10 @@
 $('document').ready(function() {// console.log("Here we go");
 
-//set form
 //id from form element
 const form = $('#form-entry');
 //id from input element in form
 const nameSet = $('#name')
-form.submit(grabForm);
-function grabForm(event) {
-  event.preventDefault();
-  const value = $('#player-name');
-  nameSet.html(value.val());
-}
-
 //get input from form and use .val to store it in top-left id
-
 //maybe a start button?
 //set variable to create array of words as possible solutions
 let turnsRemaining = 7;
@@ -27,50 +18,46 @@ const $spaces = $("#spaces");
 const $letters = $(".letters");
 let answersArray = [];
 let $turns = ('#turns');
+let $alert = ('#alert');
 
+//set form
+form.submit(grabForm);
+function grabForm(event) {
+  event.preventDefault();
+  const value = $('#player-name');
+  nameSet.html(value.val());
+}
   //add click event for each letter
   for (let j = 0; j < $letters.length; j++) {
-        $($letters[j]).click(function() {
-      turnsRemaining -= 1
-      // console.log(turnsRemaining);
-      //if my letter class is equal to a letter in the solution make innerHTML/display appear in spaces class
-        console.log($turns);
+    $($letters[j]).click(function() {
+      if(turnsRemaining > 0) {
+        turnsRemaining -= 1
+        //if my letter class is equal to a letter in the solution make innerHTML/display appear in spaces class
+        $($turns).html(turnsRemaining);
         let guessedLetter = $letters[j].innerHTML;
         let lowerCaseGuessed = guessedLetter.toLowerCase()
-          $($letters[j]).css({'visibility': 'hidden'});
-            if (characters.indexOf(lowerCaseGuessed) !== -1) {
-        let indexOfLetter = characters.indexOf(lowerCaseGuessed);
+        $($letters[j]).css({'visibility': 'hidden'});
+        if (characters.indexOf(lowerCaseGuessed) !== -1) {
+          let indexOfLetter = characters.indexOf(lowerCaseGuessed);
           for (let k = 0; k < characters.length; k++) {
             if (characters[k] === lowerCaseGuessed) {
-
               let $answerSpaces = $('.answer-space');
               $($answerSpaces[k]).html(guessedLetter);
               answersArray.push(guessedLetter);
             }
           }
         }
-      checkWin(answersArray);
-  })
-}
+        checkWin(answersArray);
+      } else {
+        $($alert).html('You Lose!');
+      }
+    })
+  }
 //check for a winner by seeing if the letters in spaces class is equal to 6
-
-
-// class Word{
-//   constructor(word)
-//   this.word = word;
-// }
-
-// class Win {
-// constructor (word, wordLength)
-// this.word = word;
-// this.wordLength = wordLength;
-// this.turnsRemaining = 7;
-// this.correctLetter = 0;
-// }
 
 function checkWin(array) {
   if (array.length === 6) {
-    alert('you won!')
+    $($alert).html('You Won!');
   }
 }
 

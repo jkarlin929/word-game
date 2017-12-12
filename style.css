@@ -10,7 +10,7 @@ h1 {
   text-shadow: 3px 3px 5px black;
   text-decoration: underline;
   position: absolute;
-  left: 600px;
+  left: 500px;
   margin: 0 auto;
 }
 
@@ -55,6 +55,7 @@ form:hover{
 
 .letters{
   border: 1px solid yellow;
+  text-shadow: 2px 2px 4px black;
   color: #ff4000;
   display: flex;
   padding: 10px;
@@ -68,6 +69,13 @@ form:hover{
   text-shadow: 3px 5px black;
 }
 
+#alert{
+  font-size: 150px;
+  text-align: center;
+  color: #b80000;
+  text-shadow: 2px 2px 4px black;
+}
+
 button {
   position: relative;
   background-color: black;
@@ -79,4 +87,27 @@ button {
   font-family: arial;
   left: 45%;
   text-align: center;
+}
+
+@media only screen and (min-device-width: 768px)
+                   and (max-device-width: 1024px)
+                   and (-webkit-min-device-pixel-ratio: 1) {
+    body {
+        background-size: 1500px 1558px;
+    }
+
+    h1 {
+      text-align: center;
+      left: 400px;
+    }
+
+    #titles {
+      width: 120%;
+    }
+
+    .row{
+      display: flex;
+      margin: 135px;
+      flex-flow: row wrap;
+    }
 }
