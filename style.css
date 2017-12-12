@@ -77,15 +77,20 @@ p {
 }
 
 #alert{
-  font-size: 150px;
   text-align: center;
   color: #b80000;
   text-shadow: 2px 2px 4px black;
-  transform: all .3s ease-in-out;
+  animation: zoomIn 3s infinite;
 }
 
-#alert:hover{
-  transform: scale(1.5);
+@keyframes zoomIn {
+  from {
+    font-size: 0px;
+  }
+
+  to{
+    font-size: 150px;
+  }
 }
 
 button {

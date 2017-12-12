@@ -35,21 +35,22 @@ POST MVP:
 
 Functional Components:
 Component   Priority    Estimated Time  Time Invetsted  Actual Time
-Win logic   High        9hrs            9hrs           4hrs
-Letters to  High        1hr                            5hrs
-click
-Spaces for  High        2hrs            1hr            3hr
-letters to
-appear
-Array of    High        1hour           20min          20min
-Words
-Add hangman Medium      5hrs            -               -      
-image
-Background  Medium      1hour           1hrs          30 mins
-Image
-Clicked     Medium      3hrs            4hrs            4hrs
-Letters
-Vanish
+____________________________________________________________________
+Win logic  | High      | 9hrs           | 9hrs          | 4hrs
+Letters to | High      | 1hr            |               | 5hrs
+click      |           |                |               |
+Spaces for | High      |  2hrs          |  1hr          | 3hr
+letters to |           |                |               |
+appear     |           |                |               |
+Array of   | High      |  1hour         |  20min        | 20min
+Words      |           |                |               |
+Add hangman| Medium    |  5hrs          |  -            |   -      
+image      |           |                |               |
+Background | Medium    | 1hour          | 1hrs          |30 mins
+Image      |           |                |               |
+Clicked    | Medium    | 3hrs           | 4hrs          |  4hrs
+Letters    |
+Vanish     |
 
 Helper Functions:
 Function                    Description
