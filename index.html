@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hangman</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" type="image/gif"
+  href="https://vignette.wikia.nocookie.net/southpark/images/d/db/Satan_2.png/revision/latest?cb=20150212080017">
+</head>
+<body>
+    <div id="titles">
+      <h1>Guess the Word</h1>
+      <h3 id="top-left"> Name: <div class="preview" id="name"> </div></h3>
+      <h3 id="top-right"> Tries Remaining: <br> <div id="turns">10</div> </h3>
+    </div>
+    <p>Instructions: Enter your name (if you dare) and begin selecting a letter below! Only 10 chances or you'll be sent to damnation.</p>
+    <form id="form-entry" onkeypress="return event.keyCode != 13;">
+      Enter Name: <input type="text" id="player-name" name="first-name">
+      <input type="submit" value="Submit">
+    </form>
+
+    <div id="alert"> </div>
+
+    <div id="spaces">
+      <div class="answer-space">_</div>
+      <div class="answer-space">_</div>
+      <div class="answer-space">_</div>
+      <div class="answer-space">_</div>
+      <div class="answer-space">_</div>
+      <div class="answer-space">_</div>
+    </div>
+
+    <div class="row">
+      <div class="letters" id="a">A</div>
+      <div class="letters" id="b">B</div>
+      <div class="letters" id="c">C</div>
+      <div class="letters" id="d">D</div>
+      <div class="letters" id="e">E</div>
+      <div class="letters" id="f">F</div>
+      <div class="letters" id="g">G</div>
+      <div class="letters" id="h">H</div>
+      <div class="letters" id="i">I</div>
+      <div class="letters" id="j">J</div>
+      <div class="letters" id="k">K</div>
+      <div class="letters" id="l">L</div>
+      <div class="letters" id="m">M</div>
+      <div class="letters" id="n">N</div>
+      <div class="letters" id="o">O</div>
+      <div class="letters" id="p">P</div>
+      <div class="letters" id="q">Q</div>
+      <div class="letters" id="r">R</div>
+      <div class="letters" id="s">S</div>
+      <div class="letters" id="t">T</div>
+      <div class="letters" id="u">U</div>
+      <div class="letters" id="v">V</div>
+      <div class="letters" id="w">W</div>
+      <div class="letters" id="x">X</div>
+      <div class="letters" id="y">Y</div>
+      <div class="letters" id="z">Z</div>
+    </div>
+
+  <button type="button" onclick="reloadPage();">Restart</button>
+
+
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <script src="hangman.js"></script>
+</body>
+</html>
